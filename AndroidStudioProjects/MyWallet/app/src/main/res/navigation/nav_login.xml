@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_login"
+    app:startDestination="@id/welcomeLoginFragment">
+
+    <fragment
+        android:id="@+id/welcomeLoginFragment"
+        android:name="com.example.mywallet.feature_wallet.presentation.auth.login.welcomescreen.WelcomeLoginFragment"
+        tools:layout="@layout/fragment_welcome_login"
+        android:label="Login" >
+        <action
+            android:id="@+id/action_welcomeLoginFragment_to_faceLoginFragment"
+            app:destination="@id/faceLoginFragment" />
+        <action
+            android:id="@+id/action_welcomeLoginFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/faceLoginFragment"
+        android:name="com.example.mywallet.feature_wallet.presentation.auth.login.face.FaceLoginFragment"
+        tools:layout="@layout/fragment_face_validation"
+        android:label="FaceLoginFragment" />
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.example.mywallet.feature_wallet.presentation.auth.login.LoginFragment"
+        tools:layout="@layout/fragment_login"
+        android:label="Login" >
+        <action
+            android:id="@+id/action_loginFragment2_to_faceLoginFragment"
+            app:destination="@id/faceLoginFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginFragment">
+
+
+        <LinearLayout
+            android:id="@+id/linear_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_login"
+                style="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Login"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/txt_enterPin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Enter your pin to login" />
+
+            <LinearLayout
+                android:id="@+id/linear_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSelectHandle="@drawable/text_handle"
+                    android:textSize="16sp"
+                     />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSelectHandle="@drawable/text_handle"
+                    android:textSize="16sp"
+                    app:distanceInBetween="10dp"
+                    app:fieldColor="@color/colorPrimary"
+                    app:highlightColor="@color/colorAccent"
+                    app:highlightType="currentField"
+                    app:noOfFields="4" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSelectHandle="@drawable/text_handle"
+                    android:textSize="16sp"
+                    app:distanceInBetween="10dp"
+                    app:fieldColor="@color/colorPrimary"
+                    app:highlightColor="@color/colorAccent"
+                    app:highlightType="currentField"
+                    app:noOfFields="4" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSelectHandle="@drawable/text_handle"
+                    android:textSize="16sp"
+                    app:distanceInBetween="10dp"
+                    app:fieldColor="@color/colorPrimary"
+                    app:highlightColor="@color/colorAccent"
+                    app:highlightType="currentField"
+                    app:noOfFields="4" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@android:color/transparent"
+            android:text="1"
+            android:textSize="@dimen/txt_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linear_txt" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:background="@android:color/transparent"
+            android:text="2"
+            android:textSize="@dimen/txt_size"
+            app:layout_constraintEnd_toStartOf="@id/btn_3"
+            app:layout_constraintStart_toEndOf="@id/btn_1"
+            app:layout_constraintTop_toBottomOf="@id/linear_txt" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/transparent"
+            android:text="3"
+            android:textSize="@dimen/txt_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linear_txt" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:background="@android:color/transparent"
+            android:text="4"
+            android:textSize="@dimen/txt_size"
+            app:layout_constraintBottom_toTopOf="@id/btn_7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:text="5"
+            android:textSize="@dimen/txt_size"
+            app:layout_constraintBottom_toTopOf="@id/btn_8"
+            app:layout_constraintEnd_toStartOf="@id/btn_6"
+            app:layout_constraintStart_toEndOf="@id/btn_4"
+            app:layout_constraintTop_toBottomOf="@id/btn_2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/transparent"
+            android:text="6"
+            android:textSize="@dimen/txt_size"
+            app:layout_constraintBottom_toTopOf="@id/btn_9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_3" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_7"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:background="@android:color/transparent"
+            android:text="7"
+            android:textSize="@dimen/txt_size"
+            app:layout_constraintBottom_toBottomOf="@id/btn_8"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/btn_8"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:text="8"
+            android:textSize="@dimen/txt_size"
+            app:layout_constraintBottom_toTopOf="@id/btn_0"
+            app:layout_constraintEnd_toStartOf="@id/btn_9"
+            app:layout_constraintStart_toEndOf="@id/btn_7"
+            app:layout_constraintTop_toBottomOf="@id/btn_5" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_9"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/transparent"
+            android:text="9"
+            android:textSize="@dimen/txt_size"
+            app:layout_constraintBottom_toTopOf="@id/btn_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_6" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_0"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="40dp"
+            android:background="@android:color/transparent"
+            android:text="0"
+            android:textSize="@dimen/txt_size"
+            app:layout_constraintBottom_toTopOf="@id/linear_view"
+            app:layout_constraintEnd_toEndOf="@id/btn_8"
+            app:layout_constraintStart_toStartOf="@id/btn_8" />
+
+        <ImageButton
+            android:id="@+id/btn_delete"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="40dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_outline_backspace"
+            android:textSize="@dimen/txt_size"
+            app:layout_constraintBottom_toTopOf="@id/linear_view"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linear_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:layout_marginBottom="32dp"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/linear_biometric">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="2"
+                android:paddingStart="8dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/black"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+              android:gravity="center_horizontal"
+                android:text="Forgot pin"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="2"
+                android:paddingEnd="8dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_biometric"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="32dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_fingerprint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/curved_botton"
+                android:drawableStart="@drawable/ic_fingerprint"
+                android:drawablePadding="5dp"
+                android:gravity="start|center_vertical"
+                android:padding="2dp"
+                android:text="@string/fingerprint"
+                android:textSize="10sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_faceId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/curved_botton"
+                android:drawableStart="@drawable/ic_outline_center"
+                android:drawablePadding="5dp"
+                android:gravity="start|center_vertical"
+                android:padding="2dp"
+                android:paddingStart="5dp"
+                android:text="Face ID"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_voiceId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/curved_botton"
+                android:drawableStart="@drawable/ic_mic"
+                android:drawablePadding="5dp"
+                android:gravity="left|center_vertical"
+                android:padding="2dp"
+                android:paddingStart="5dp"
+                android:text="Voice ID"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

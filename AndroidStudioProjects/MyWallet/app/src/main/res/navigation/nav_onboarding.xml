@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_onboarding"
+    app:startDestination="@id/splashFragment1">
+
+    <fragment
+        android:id="@+id/recordAudioFragment"
+        android:name="com.example.mywallet.feature_wallet.presentation.auth.onboarding.voice.RecordAudioFragment"
+        android:label="Voice"
+        tools:layout="@layout/fragment_record_audio">
+        <argument
+            android:name="isFaceOrAudiRegistered"
+            app:argType="string" />
+        <argument
+            android:name="user"
+            app:argType="com.example.mywallet.feature_wallet.domain.model.User"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_recordAudioFragment_to_faceFragment"
+            app:destination="@id/faceFragment" />
+        <action
+            android:id="@+id/action_recordAudioFragment_to_pinFragment"
+            app:destination="@id/pinFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/verifyOTPFragment"
+        android:name="com.example.mywallet.feature_wallet.presentation.auth.onboarding.otp.VerifyOTPFragment"
+        android:label="Device Verification"
+        tools:layout="@layout/fragment_verify_o_t_p">
+        <action
+            android:id="@+id/action_verifyOTPFragment_to_recordAudioFragment"
+            app:destination="@id/recordAudioFragment" />
+        <action
+            android:id="@+id/action_verifyOTPFragment_to_faceFragment"
+            app:destination="@id/faceFragment" />
+        <argument
+            android:name="user"
+            app:argType="com.example.mywallet.feature_wallet.domain.model.User" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/pinFragment"
+        android:name="com.example.mywallet.feature_wallet.presentation.auth.onboarding.pin.PinFragment"
+        android:label="Pin"
+        tools:layout="@layout/fragment_pin">
+        <argument
+            android:name="user"
+            app:argType="com.example.mywallet.feature_wallet.domain.model.User" />
+    </fragment>
+    <fragment
+        android:id="@+id/faceFragment"
+        android:name="com.example.mywallet.feature_wallet.presentation.auth.onboarding.face.FaceFragment"
+        android:label="Face Authentication"
+        tools:layout="@layout/fragment_face">
+        <argument
+            android:name="isFaceOrAudioRegistered"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_faceFragment_to_recordAudioFragment"
+            app:destination="@id/recordAudioFragment" />
+        <action
+            android:id="@+id/action_faceFragment_to_pinFragment"
+            app:destination="@id/pinFragment" />
+        <argument
+            android:name="user"
+            app:argType="com.example.mywallet.feature_wallet.domain.model.User"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment1"
+        android:name="com.example.mywallet.feature_wallet.presentation.auth.onboarding.splashscreen.SplashFragment1"
+        android:label="Mobile Bank App"
+        tools:layout="@layout/fragment_splash1">
+        <action
+            android:id="@+id/action_splashFragment1_to_accountLookupFragment"
+            app:destination="@id/accountLookupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountLookupFragment"
+        android:name="com.example.mywallet.feature_wallet.presentation.auth.onboarding.account_lookup.AccountLookupFragment"
+        android:label="Account Lookup"
+        tools:layout="@layout/fragment_account_lookup">
+        <action
+            android:id="@+id/action_accountLookupFragment_to_MBActivationFragment"
+            app:destination="@id/MBActivationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MBActivationFragment"
+        android:name="com.example.mywallet.feature_wallet.presentation.auth.onboarding.activation.MBActivationFragment"
+        android:label="Mobile banking Activation"
+        tools:layout="@layout/fragment_m_b_activation">
+
+        <action
+            android:id="@+id/action_MBActivationFragment_to_verifyOTPFragment"
+            app:destination="@id/verifyOTPFragment" />
+    </fragment>
+</navigation>

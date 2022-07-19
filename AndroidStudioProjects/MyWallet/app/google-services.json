@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "482229932944",
+    "project_id": "otp-verification-e000f",
+    "storage_bucket": "otp-verification-e000f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482229932944:android:e67765889cf817f7489915",
+        "android_client_info": {
+          "package_name": "com.devandroid.mywallet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "482229932944-nfpo8qt9rjji722thlgav8he510o52vo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.devandroid.mywallet",
+            "certificate_hash": "f66a3692d18aa4f668a16fc470d33b2135328538"
+          }
+        },
+        {
+          "client_id": "482229932944-ht1ik35f365vj8emcuav74c3hs9ps192.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcTC8M3mLVnVbi1vsapOKrSxbcaF0FlqI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "482229932944-ht1ik35f365vj8emcuav74c3hs9ps192.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

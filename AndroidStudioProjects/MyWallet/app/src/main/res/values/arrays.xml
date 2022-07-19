@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="balance_synonyms">
+        <item>balance</item>
+        <item>my balance</item>
+        <item>my current balance</item>
+        <item>my money</item>
+        <item>current balance</item>
+        <item>current money</item>
+    </string-array>
+
+    <string-array name="transaction_synonyms">
+        <item>transaction</item>
+        <item>money sent</item>
+        <item>money received</item>
+    </string-array>
+
+    <string-array name="bill_synonyms">
+        <item>current balance</item>
+        <item>current money</item>
+        <item>my balance</item>
+        <item>balance</item>
+    </string-array>
+
+    <string-array name="moneyTransferOriginProvidername">
+        <item>M pesa</item>
+        <item>Savings account</item>
+        <item>Wallet account</item>
+    </string-array>
+
+    <string-array name="moneyTransferMode">
+        <item>Add</item>
+        <item>Receive Money</item>
+        <item>Send</item>
+        <item>Make</item>
+        <item>Request</item>
+    </string-array>
+
+    <string-array name="bankAccounts">
+        <item>Personal account</item>
+        <item>Savings account</item>
+        <item>Fixed deposit account</item>
+    </string-array>
+</resources>

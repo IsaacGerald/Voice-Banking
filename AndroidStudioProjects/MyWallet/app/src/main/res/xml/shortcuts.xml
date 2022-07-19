@@ -1,0 +1,169 @@
+<?xml version ="1.0" encoding ="utf-8"?><!--  Learn More about how to use App Actions: https://developer.android.com/guide/actions/index.html -->
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <capability android:name="actions.intent.GET_THING">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.example.mywallet.transfer_feature.presentation.ui.TransactionActivity"
+            android:targetPackage="com.devandroid.mywallet">
+            <parameter
+                android:name="thing.name"
+                android:key="name" />
+        </intent>
+    </capability>
+
+    <shortcut
+        android:enabled="false"
+        android:shortcutId="balance"
+        android:shortcutShortLabel="@string/balance">
+        <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+            <parameter-binding
+                android:key="feature"
+                android:value="@array/balance_synonyms" />
+        </capability-binding>
+    </shortcut>
+
+    <shortcut
+        android:enabled="false"
+        android:shortcutId="transaction"
+        android:shortcutShortLabel="@string/transactions">
+        <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+            <parameter-binding
+                android:key="feature"
+                android:value="@array/transaction_synonyms" />
+        </capability-binding>
+    </shortcut>
+
+
+    <capability android:name="actions.intent.OPEN_APP_FEATURE">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.example.mywallet.transfer_feature.presentation.ui.TransactionActivity"
+            android:targetPackage="com.devandroid.mywallet">
+            <parameter
+                android:name="feature"
+                android:key="feature" />
+        </intent>
+    </capability>
+
+    <shortcut
+        android:enabled="true"
+        android:shortcutId="bill"
+        android:shortcutShortLabel="@string/bill">
+        <capability-binding android:key="actions.intent.GET_INVOICE">
+            <parameter-binding
+                android:key="forServiceName"
+                android:value="@array/bill_synonyms" />
+        </capability-binding>
+    </shortcut>
+
+
+    <capability android:name="actions.intent.GET_INVOICE">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.example.mywallet.transfer_feature.presentation.ui.TransactionActivity"
+            android:targetPackage="com.devandroid.mywallet">
+            <!-- Eg. forServiceName = "Utility" -->
+            <parameter
+                android:name="invoice.forService.name"
+                android:key="forServiceName" />
+        </intent>
+    </capability>
+
+    <shortcut
+        android:enabled="true"
+        android:shortcutId="originProviderName"
+        android:shortcutShortLabel="@string/origin_provider_label">
+        <capability-binding android:key="actions.intent.CREATE_MONEY_TRANSFER">
+            <parameter-binding
+                android:key="moneyTransferOriginProvidername"
+                android:value="@array/moneyTransferOriginProvidername" />
+        </capability-binding>
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:shortcutId="originDestinationName"
+        android:shortcutShortLabel="@string/destination_provider_label">
+        <capability-binding android:key="actions.intent.CREATE_MONEY_TRANSFER">
+            <parameter-binding
+                android:key="moneyTransferDestinationProvidername"
+                android:value="@array/moneyTransferOriginProvidername" />
+        </capability-binding>
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:shortcutId="moneyTransferMode"
+        android:shortcutShortLabel="@string/money_transfer_mode_label">
+        <capability-binding android:key="actions.intent.CREATE_MONEY_TRANSFER">
+            <parameter-binding
+                android:key="transferMode"
+                android:value="@array/moneyTransferMode" />
+        </capability-binding>
+    </shortcut>
+
+
+    <capability android:name="actions.intent.CREATE_MONEY_TRANSFER">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.example.mywallet.wallet_feature.presentation.wallet.MainActivity"
+            android:targetPackage="com.devandroid.mywallet">
+            <!-- Eg. currency = "USD" -->
+            <!-- Eg. transferMode = "http://schema.googleapis.com/ReceiveMoney" -->
+            <parameter
+                android:name="moneyTransfer.transferMode"
+                android:key="transferMode" />
+            <parameter
+                android:name="moneyTransfer.amount.currency"
+                android:key="currency" />
+            <!-- Eg. moneyTransferOriginName = "Credit card" -->
+            <parameter
+                android:name="moneyTransfer.moneyTransferOrigin.name"
+                android:key="moneyTransferOriginName" />
+            <!-- Eg. moneyTransferDestinationName = "Savings account" -->
+            <parameter
+                android:name="moneyTransfer.moneyTransferDestination.name"
+                android:key="moneyTransferDestinationName" />
+            <parameter
+                android:name="moneyTransfer.amount.value"
+                android:key="value" />
+            <!-- Eg. moneyTransferOriginProvidername = "Example Provider" -->
+            <parameter
+                android:name="moneyTransfer.moneyTransferOrigin.provider.name"
+                android:key="moneyTransferOriginProvidername" />
+            <!-- Eg. moneyTransferDestinationProvidername = "Example Provider" -->
+            <parameter
+                android:name="moneyTransfer.moneyTransferDestination.provider.name"
+                android:key="moneyTransferDestinationProvidername" />
+
+        </intent>
+    </capability>
+
+    <capability android:name="actions.intent.PAY_INVOICE">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.example.mywallet.transfer_feature.presentation.ui.TransactionActivity"
+            android:targetPackage="com.devandroid.mywallet">
+            <!-- Eg. value = "20" -->
+            <parameter
+                android:name="amount.value"
+                android:key="value" />
+            <!-- Eg. currency = "USD" -->
+            <parameter
+                android:name="amount.currency"
+                android:key="currency" />
+            <!-- Eg. paymentMethodId = "Credit Card" -->
+            <parameter
+                android:name="invoice.paymentMethodId"
+                android:key="paymentMethodId" />
+            <!-- Eg. forServiceName = "Utility" -->
+            <parameter
+                android:name="invoice.forService.name"
+                android:key="forServiceName" />
+            <!-- Eg. providerName = "Example Provider" -->
+            <parameter
+                android:name="invoice.forService.provider.name"
+                android:key="providerName" />
+        </intent>
+    </capability>
+</shortcuts>

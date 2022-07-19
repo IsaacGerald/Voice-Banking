@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph_main"
+    app:startDestination="@id/transactionFragment">
+
+
+    <fragment
+        android:id="@+id/serviceTransferFragment"
+        android:name="com.example.mywallet.feature_wallet.presentation.wallet.service_transfer.ServiceTransferFragment"
+        android:label="Transfer"
+        tools:layout="@layout/fragment_transfer" >
+        <argument
+            android:name="transferModel"
+            app:argType="com.example.mywallet.feature_wallet.domain.model.Transfer"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="com.example.mywallet.feature_wallet.presentation.wallet.transaction.TransactionFragment"
+        android:label="Transaction"
+        tools:layout="@layout/fragment_transaction" >
+        <action
+            android:id="@+id/action_transactionFragment_to_serviceTransferFragment"
+            app:destination="@id/serviceTransferFragment"
+            app:popUpTo="@id/transactionFragment" />
+        <action
+            android:id="@+id/action_transactionFragment_to_billsFragment"
+            app:destination="@id/billsFragment"
+            app:popUpTo="@id/transactionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/billsFragment"
+        android:name="com.example.mywallet.feature_wallet.presentation.wallet.bills.BillsFragment"
+        android:label="Bills"
+        tools:layout="@layout/fragment_bills" />
+</navigation>

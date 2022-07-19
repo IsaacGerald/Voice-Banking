@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SplashFragment1">
+
+
+        <TextView
+            android:id="@+id/txt_welcome"
+            android:layout_width="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="8dp"
+            android:text="Hello there, welcome to Eclectics Bank we are happy to have you here"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_selection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_welcome"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:text="@string/welcome_note"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/txt_bank"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_bank_24"
+            android:textSize="32sp" />
+
+        <LinearLayout
+            android:id="@+id/linear_selection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true">
+
+
+            <Button
+                android:id="@+id/btn_have_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I have an eclectics account"/>
+
+            <Button
+                android:id="@+id/btn_no_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I am new to eclectics"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
